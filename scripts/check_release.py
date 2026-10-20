@@ -140,7 +140,7 @@ def main():
     assert set(manifest["uiSourceSHA256"]) == sources
     for name in sources:
         assert sha((ROOT / "src" / name).read_bytes()) == manifest["uiSourceSHA256"][name]
-    allowed = {"README.md", "DEVELOPMENT.md", "CHANGELOG.md", "CONTRIBUTING.md", "src/roadmap.json", ".gitignore", ".gitattributes", ".github/workflows/deploy.yml", "scripts/check_release.py", "scripts/build_site.py", "scripts/check_ammo_offers.cjs"}
+    allowed = {"README.md", "DEVELOPMENT.md", "CHANGELOG.md", "CONTRIBUTING.md", "src/roadmap.json", ".gitignore", ".gitattributes", ".github/workflows/deploy.yml", "scripts/check_release.py", "scripts/build_site.py", "scripts/check_ammo_offers.cjs", "scripts/check_curves.cjs", "scripts/check_magazines.cjs"}
     allowed |= {"src/" + name for name in sources}
     for path in ROOT.rglob("*"):
         if ".git" in path.relative_to(ROOT).parts or not path.is_file():

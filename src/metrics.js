@@ -1,6 +1,8 @@
 // Ordered raw fields only. Unknown or context-dependent quantities remain unranked.
 
 const metricRules={
+  MagazineReloadPlayRate:['high','Stored magazine reload animation play rate; not reload duration'],MagazineSwayMultiplier:['low','Stored magazine sway multiplier; character base not evaluated'],
+  AmmoCapacity:['high','Authored ammo-container capacity; excludes reserve and vendor pack quantity'],ChamberCapacity:['high','Separate serialized chamber capacity; never added to magazine capacity'],MagazineWeight:['low','Stored magazine inventory weight'],
 
   rpm:['high','Configured fire rate'],RoundsPerMinute:['high','Configured fire rate'],
 
