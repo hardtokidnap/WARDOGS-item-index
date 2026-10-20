@@ -1,0 +1,27 @@
+[
+  {
+    "id": "website-release",
+    "status": "done",
+    "label": "Equipment browsing, comparisons, Build Lab and project information pages."
+  },
+  {
+    "id": "usability",
+    "status": "planned",
+    "label": "Further usability improvements and corrections from community feedback."
+  },
+  {
+    "id": "attachment-effects",
+    "status": "paused",
+    "label": "Additional attachment effect operations and combined build-value coverage."
+  },
+  {
+    "id": "damage-outcomes",
+    "status": "paused",
+    "label": "Verified final armour and vehicle-component damage outcomes."
+  },
+  {
+    "id": "explosives",
+    "status": "paused",
+    "label": "Remaining explosive defaults and complete explosion damage inputs."
+  }
+]
