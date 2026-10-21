@@ -48,8 +48,8 @@
       "sha256": "b75dbe42a5f3053539ce4827651f71760f684fa96631c35aa2b87e8ee77bb85f"
     },
     "index.html": {
-      "bytes": 1955389,
-      "sha256": "798c36df14a9435c978506274a28e9a5ac06badb63245b384568db70d8c64c7c"
+      "bytes": 1961592,
+      "sha256": "bfd0122e45cea0b21c95b3a43b237abeef1bedd135ad9ab6e0cb1d2e107e47a1"
     },
     "site-assets/000d22014b87200e.png": {
       "bytes": 70486,
@@ -1565,9 +1565,9 @@
     }
   },
   "uiSourceSHA256": {
-    "template.html": "60593daa5fc0a6b2dd1d4bec83083b4464787d96d796e81a84868358d2f18472",
-    "metrics.js": "b95197fa84b6eca6b9327660540c7cf2ced0a9f4afaf722ff663f37c4ffd6581",
-    "runtime.js": "b4a448e8aceb71dac6e1c53bd0399ec7aaf8ccd65db88f3ad8c72d4617dce0ec",
+    "template.html": "d564663eea8b6030f5220f1532be30144c7311068fc028700e5b0a9e6622f4b9",
+    "metrics.js": "82dada99af0c6a1b4ede148fbadada26c35be8edd6f8aed2a6a7b53c314887d3",
+    "runtime.js": "00f599ed3876d31ef5cf6dfd7d2c6a86aa7b1b51829c39f4980b1ad5ad0db738",
     "comparison.js": "a78f6c8a4afcb66a1858e8e7418e008a26b7d22e300ce141c775ac25f8c855dc",
     "gear.js": "ebddd227556c5676ae873b3089ffee00e850e551f368a3ef1e592d9941beaac5"
   },

@@ -79,3 +79,17 @@ function opticZoom(data){
   const minima=profiles.map(p=>p.minimum).filter(v=>typeof v==='number'&&Number.isFinite(v));return profiles.length?{minimum:minima.length?Math.min(...minima):null,maximum:Math.max(...profiles.map(p=>p.maximum)),profiles}:null;
 
 }
+
+function recoilEstimate(pattern,values){
+  if(!values||!Array.isArray(pattern)||!pattern.length||pattern.some(point=>!Number.isFinite(point?.X)||!Number.isFinite(point?.Y)))return null;
+  // Raw point RMS keeps both signs; no accumulation, cap scaling or random-recoil model.
+  const horizontal=Math.sqrt(pattern.reduce((sum,point)=>sum+point.X**2,0)/pattern.length)*values.HorizontalRecoilMultiplier;
+  const vertical=Math.sqrt(pattern.reduce((sum,point)=>sum+point.Y**2,0)/pattern.length)*values.VerticalRecoilMultiplier;
+  if(![values.HorizontalRecoilMultiplier,values.VerticalRecoilMultiplier,horizontal,vertical].every(value=>typeof value==='number'&&Number.isFinite(value)&&value>0))return null;
+  const combined=Math.hypot(horizontal,vertical);return Number.isFinite(combined)?{horizontal,vertical,combined,points:pattern.length}:null;
+}
+
+function recoilScores(estimate,preference='balanced'){
+  if(!estimate)return null;
+  return preference==='horizontal'?[estimate.horizontal,estimate.vertical]:preference==='vertical'?[estimate.vertical,estimate.horizontal]:[estimate.combined];
+}
